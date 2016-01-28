@@ -10,55 +10,106 @@
     </head>
     <body>
         <header class="site-header">
-            <div class="container site-header__container">
-                <div class="row">
-                    <div class="site-header__logo-wrapper">
-                        <a href="/" class="site-header__logo">BillApp</a>
-                    </div>
-                    <nav class="site-nav">
-                        <a href="#" class="site-nav__link">Home</a>
-                        <a href="#" class="site-nav__link">About</a>
-                        <a href="#" class="site-nav__link">Bills</a>
-                        <a href="#" class="site-nav__link">Companies</a>
-                        <a href="#" class="site-nav__link">Logout</a>
-                        <div class="account-utils">
-                            <span class="account-utils__image" style="background-image: url('https://pbs.twimg.com/profile_images/562975581235470336/dx0tuhSa.png');"></span>
-                            <span class="account-utils__name">Taylor Daughtry</span>
-                        </div>
-                    </nav>
-                </div>
-                <div class="homepage-summary">
-                    <div class="homepage-summary__row">
-                        <div class="half-column">
-                            <div class="homepage-summary__row">
-                                <div class="number-block -column -white-text">
-                                    <span class="number-block__info">% Change</span>
-                                    <h2 class="number-block__title">78%</h2>
-                                </div>
-                                <div class="number-block -column -white-text">
-                                    <span class="number-block__info">Net Worth</span>
-                                    <h2 class="number-block__title">$1,238.46</h2>
-                                </div>
-                                <div class="number-block -column">
-                                    <span class="number-block__info">Income</span>
-                                    <h2 class="number-block__title -credit">$3,425.20</h2>
-                                </div>
-                                <div class="number-block -column">
-                                    <span class="number-block__info">Expenses</span>
-                                    <h2 class="number-block__title -debit">$2,580.25</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="half-column">
-                            <h3 class="homepage-summary__welcome-title">Welcome, Taylor!</h3>
-                            <p class="homepage-summary__welcome-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                        </div>
-                    </div>
+            <div class="container">
+                <span class="site-header__tagline">Weekly Worth</span>
+                <div class="account-utils">
+                    <span class="account-utils__image"></span>
+                    <span class="account-utils__name">Taylor</span>
                 </div>
             </div>
         </header>
+        <div class="location-bar">
+            <div class="container">
+                <span class="location-bar__current-page">Dashboard</span>
+                <span class="location-bar__net-worth">$2,405.29</span>
+            </div>
+        </div>
+        <div class="tabs-bar">
+            <div class="container">
+                <a href="#" class="tabs-bar__link">Bills</a>
+                <a href="#" class="tabs-bar__link">Income</a>
+                <a href="#" class="tabs-bar__link">Payees</a>
+                <a href="#" class="tabs-bar__link">Settings</a>
+                <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
+            </div>
+        </div>
         <div class="container">
-            @yield('content')
+            <div class="homepage-summary">
+                <div class="default-row">
+                    <div class="number-block">
+                        <span class="number-block__caption">This Week's Worth</span>
+                        <h1 class="number-block__title">$2,405.29</h1>
+                    </div>
+                    <div class="number-block">
+                        <span class="number-block__caption">This Week's Income</span>
+                        <h1 class="number-block__title -credit">$1,980.67</h1>
+                    </div>
+                    <div class="number-block">
+                        <span class="number-block__caption">This Week's Expenses</span>
+                        <h1 class="number-block__title -debit">$1,320.46</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="default-row">
+                <div class="top-expenses">
+                    <span class="top-expenses__title">Top Expenses</span>
+                    <ul class="top-expenses__list">
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-expenses">
+                    <span class="top-expenses__title">Top Income</span>
+                    <ul class="top-expenses__list">
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                        <li class="top-expenses__item">
+                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__amount">$1,200.00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </body>
 </html>
