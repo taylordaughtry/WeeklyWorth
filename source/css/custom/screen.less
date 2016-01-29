@@ -27,7 +27,7 @@ body {
 	.relative();
 }
 .default-row {
-	.inline-row(4%);
+	.inline-row(5%);
 }
 .-debit {
 	.color(@debit);
@@ -45,6 +45,23 @@ body {
 	}
 	&__title {
 		.font-size(5; 1);
+	}
+}
+.tag {
+	.align(baseline);
+	.font-size(1.4; 1);
+	.inline-block();
+	.letter-spacing(0.05);
+	.margin(left; 1);
+	.padding(0.3; 0.4);
+	.rounded(0.2);
+	.uppercase();
+	.white();
+	&.-is-fixed {
+		.background(@fixed);
+	}
+	&.-is-variable {
+		.background(@caution);
 	}
 }
 
@@ -124,18 +141,55 @@ body {
 
 
 /*------------------------------------*\
+	# Footer
+\*------------------------------------*/
+
+.site-footer {
+	.font-size(1.4);
+	.margin(top, 8);
+	.padding(top; 2);
+	.color(tint(@primary, 80%));
+	&__row {
+		.inline-row(0%);
+		.border(top; @lighterGray);
+		.padding(top; 1);
+	}
+	&__copyright {
+		.block();
+	}
+	&__wide {
+		.inline-column(7; 10);
+	}
+	&__thin {
+		.align(right);
+		.inline-column(3; 10);
+	}
+	&__link {
+		.color(tint(@primary, 80%));
+		.margin(left; 1.5);
+		&:first-child {
+			.margin(left; 0);
+		}
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
 	# Homepage
 \*------------------------------------*/
 
 .homepage-summary {
 	.border(bottom; @lighterGray);
 	.number-block {
-		.inline-column(spaced; 1; 3; 4%);
+		.inline-column(spaced; 1; 3; 5%);
 		.align(center);
 	}
 }
 .top-expenses {
-	.inline-column(spaced; 1; 2; 4%);
+	.inline-column(spaced; 1; 2; 5%);
 	.margin(top; 4);
 	&__title {
 		.block();

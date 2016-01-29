@@ -26,8 +26,9 @@
         </div>
         <div class="tabs-bar">
             <div class="container">
-                <a href="#" class="tabs-bar__link">Bills</a>
+                <a href="/" class="tabs-bar__link">Home</a>
                 <a href="#" class="tabs-bar__link">Income</a>
+                <a href="#" class="tabs-bar__link">Expenses</a>
                 <a href="#" class="tabs-bar__link">Payees</a>
                 <a href="#" class="tabs-bar__link">Settings</a>
                 <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
@@ -55,28 +56,28 @@
                     <span class="top-expenses__title">Top Expenses</span>
                     <ul class="top-expenses__list">
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
+                            <span class="top-expenses__expense">Rent <span class="tag -is-fixed">Fixed</span></span>
                             <span class="top-expenses__amount">$1,200.00</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Electricity <span class="tag -is-variable">Variable</span></span>
+                            <span class="top-expenses__amount">$364.20</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Internet/Cable <span class="tag -is-fixed">Fixed</span></span>
+                            <span class="top-expenses__amount">$246.35</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Phone <span class="tag -is-fixed">Fixed</span></span>
+                            <span class="top-expenses__amount">$23.36</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Car Loan <span class="tag -is-fixed">Fixed</span></span>
+                            <span class="top-expenses__amount">$579.02</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Water <span class="tag -is-variable">Variable</span></span></span>
+                            <span class="top-expenses__amount">$79.61</span>
                         </li>
                     </ul>
                 </div>
@@ -84,32 +85,36 @@
                     <span class="top-expenses__title">Top Income</span>
                     <ul class="top-expenses__list">
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Paycheck <span class="tag -is-fixed">Fixed</span></span>
+                            <span class="top-expenses__amount">$1,773.23</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Amazon <span class="tag -is-variable">Variable</span></span>
+                            <span class="top-expenses__amount">$211.21</span>
                         </li>
                         <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
-                        </li>
-                        <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
-                        </li>
-                        <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
-                        </li>
-                        <li class="top-expenses__item">
-                            <span class="top-expenses__expense">Rent</span>
-                            <span class="top-expenses__amount">$1,200.00</span>
+                            <span class="top-expenses__expense">Elemental <span class="tag -is-variable">Variable</span></span>
+                            <span class="top-expenses__amount">$386.29</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        <footer class="site-footer">
+            <div class="container site-footer__container">
+                <div class="site-footer__row">
+                    <div class="site-footer__wide">
+                        <span class="site-footer__copyright">WeeklyWorth is &copy; 2016 Taylor Daughtry, All Rights Reserved.</span>
+                    </div>
+                    <div class="site-footer__thin">
+                        <nav>
+                            <a href="#" class="site-footer__link">About</a>
+                            <a href="#" class="site-footer__link">Security</a>
+                            <a href="#" class="site-footer__link">Settings</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
