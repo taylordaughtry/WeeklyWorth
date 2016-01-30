@@ -112,23 +112,54 @@ body {
 .tabs-bar {
 	.background(@primary);
 	&__link {
+		.background(tint(@primary, 10%));
 		.color(tint(@primary, 90%));
 		.inline-block();
 		.margin(left; 1.5);
-		.background(tint(@primary, 10%));
-		.padding(vertical; 0.3; 0.5);
 		.padding(horizontal; 1.5rem);
+		.padding(vertical; 0.3);
 		.transition(); // TODO target proper rules
-		&:first-child {
-			.margin(left; 0);
-		}
-		&:last-of-type {
-			.background(tint(@primary, 5%));
-		}
 		&:hover {
-			.background(tint(@primary, 20%));
+			.background(tint(@primary, 40%));
 			.white();
 		}
+	}
+	&__sublink {
+		.align(center);
+		.background(tint(@primary, 40%));
+		.font-size(1.4);
+		.width(11);
+		.margin(left; 0);
+	}
+	&__item {
+		.inline-block();
+		.relative();
+		.unstyled();
+		&:first-child {
+			.tabs-bar {
+				&__link {
+					.margin(left; 0);
+				}
+			}
+		}
+		&:hover {
+			.tabs-bar {
+				&__dropdown {
+					.block();
+				}
+			}
+		}
+		&:last-child {
+			.tabs-bar {
+				&__link {
+					.background(tint(@primary, 5%));
+				}
+			}
+		}
+	}
+	&__dropdown {
+		.absolute(100%; false; false; 1.5);
+		.hide();
 	}
 	&__delta {
 		.absolute(false; 7.5%);
