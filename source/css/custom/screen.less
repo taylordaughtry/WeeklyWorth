@@ -64,6 +64,11 @@ body {
 		.background(@caution);
 	}
 }
+.label {
+	.font-size(1.4);
+	.letter-spacing(0.05);
+	.uppercase();
+}
 
 
 
@@ -179,7 +184,7 @@ body {
 .site-footer {
 	.font-size(1.4);
 	.margin(top, 8);
-	.padding(top; 2);
+	.padding(vertical; 2);
 	.color(tint(@primary, 80%));
 	&__row {
 		.inline-row(0%);
@@ -258,6 +263,11 @@ body {
 	&__content {
 		.inline-column(spaced; 6; 10; 5%);
 		.padding(top; 4);
+		&.-full {
+			.block();
+			.column-reset();
+			.margin(left; 0);
+		}
 	}
 	&__title {
 		.spaced(1);
