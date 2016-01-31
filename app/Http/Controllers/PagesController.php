@@ -21,14 +21,16 @@ class PagesController extends Controller
     {
 
         // TODO: optimize these queries.
+        // TODO: Decide whether or now to show a monthly earnings, instead of
+        // just a weekly breakdown of the totals.
 
     	$data['incomes'] = Income::all()->sortByDesc('amount');
 
         $data['expenses'] = Expense::all()->sortByDesc('amount');
 
-    	$data['totalIncome'] = DB::table('incomes')->sum('amount');
+    	$data['totalIncome'] = DB::table('incomes')->sum('amount') / 4;
 
-        $data['totalExpenses'] = DB::table('expenses')->sum('amount');
+        $data['totalExpenses'] = DB::table('expenses')->sum('amount') / 4;
 
         $data['weeklyWorth'] = $data['totalIncome'] - $data['totalExpenses'];
 
