@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBillsTable extends Migration
+class CreateExpensesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,14 @@ class CreateBillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bills', function (Blueprint $table) {
+        Schema::create('expenses', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('company_id');
+            $table->char('name', 75);
             $table->date('due_date');
             $table->text('description');
             $table->integer('amount');
+            $table->enum('type', ['variable', 'fixed']);
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateBillsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('bills');
+        Schema::drop('expenses');
     }
 }
