@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Income;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,9 @@ class IncomesController extends Controller
      */
     public function index()
     {
-        return view('incomes/index');
+        $incomes = Income::all()->sortByDesc('amount');
+
+        return view('incomes/index')->with('incomes', $incomes);
     }
 
     /**
@@ -26,7 +29,7 @@ class IncomesController extends Controller
      */
     public function create()
     {
-        //
+        return view('incomes/create');
     }
 
     /**
@@ -37,7 +40,13 @@ class IncomesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->toArray();
+
+        $data['amount'] = preg_replace("/[^0-9\.]/", "",$data['amount']);
+
+        Income::create($data);
+
+        return redirect('/income');
     }
 
     /**
@@ -82,6 +91,7 @@ class IncomesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Income::destroy($id);
+        return redirect('/income');
     }
 }
