@@ -44,7 +44,7 @@
         <div class="location-bar">
             <div class="container">
                 <span class="location-bar__current-page">Dashboard</span>
-                <span class="location-bar__net-worth">$2,405.29</span>
+                <span class="location-bar__net-worth">${{ number_format($netWorth, 2) }}</span>
             </div>
         </div>
         <div class="tabs-bar">
@@ -70,7 +70,7 @@
                         </div>
                     </li>
                     <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Settings</a></li>
-                    <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
+                    <span class="tabs-bar__delta">Current Funds Usage: {{ number_format($fundsUsage, 2) }}%</span>
                 </ul>
             </div>
         </div>
