@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Income;
+use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,6 +18,10 @@ class PagesController extends Controller
 	 */
     public function index()
     {
-    	return view('index');
+    	$data['incomes'] = Income::all()->sortByDesc('amount');
+
+    	$data['totalIncome'] = DB::table('incomes')->sum('amount');
+
+    	return view('index', $data);
     }
 }
