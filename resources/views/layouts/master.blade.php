@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" id="global" itemscope itemtype="http://schema.org/WebPage">
     <head>
-        <title>Document</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>WeeklyWorth</title>
+        <meta name="description" content="Blueprint for modern web development.">
+
         <link rel="stylesheet" href="/assets/css/style.min.css">
-        <script type="text/css" src="/assets/js/script.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,400italic,600' rel='stylesheet' type='text/css'>
+
+        <link rel="apple-touch-icon" href="/assets/img/icons/touch.png">
+        <link rel="mask-icon" href="/assets/img/icons/pin.svg" color="#349bb9">
+        <link rel="publisher" href="https://plus.google.com/+weecss">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@weecss">
+
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Wee">
+        <meta property="og:title" content="Front-End Framework" itemprop="name">
+        <meta property="og:description" content="Blueprint for modern web development." itemprop="description">
+        <meta property="og:url" content="https://www.weepower.com" itemprop="url">
+        <meta property="og:image" content="https://www.weepower.com/assets/img/share.png" itemprop="image">
+
+        <!--[if lte IE 9]>
+        <script src="/assets/js/ie9.min.js"></script>
+        <![endif]-->
         <!-- TODO: Move this to the appropriate location -->
-        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <!-- <script src="http://code.highcharts.com/highcharts.js"></script> -->
     </head>
     <body>
         <header class="site-header">
@@ -26,12 +49,19 @@
         </div>
         <div class="tabs-bar">
             <div class="container">
-                <a href="{{ route('home') }}" class="tabs-bar__link">Home</a>
-                <a href="{{ URL::to('income') }}" class="tabs-bar__link">Income</a>
-                <a href="#" class="tabs-bar__link">Expenses</a>
-                <a href="#" class="tabs-bar__link">Payees</a>
-                <a href="#" class="tabs-bar__link">Settings</a>
-                <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
+                <ul class="tabs-bar__list">
+                    <li class="tabs-bar__item"><a href="{{ route('home') }}" class="tabs-bar__link">Home</a></li>
+                    <li class="tabs-bar__item">
+                        <a href="{{ URL::to('income') }}" class="tabs-bar__link">Income</a>
+                        <div class="tabs-bar__dropdown">
+                            <a href="{{ URL::to('income/create') }}" class="tabs-bar__link tabs-bar__sublink">Add Source</a>
+                        </div>
+                    </li>
+                    <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Expenses</a></li>
+                    <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Payees</a></li>
+                    <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Settings</a></li>
+                    <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
+                </ul>
             </div>
         </div>
         <div class="container">
@@ -53,5 +83,7 @@
                 </div>
             </div>
         </footer>
-    </body>
+
+<script src="/assets/js/script.min.js"></script>
+</body>
 </html>
