@@ -7,7 +7,7 @@
     {!! Form::open(array('route' => 'income.store')) !!}
 
         {!! Form::label('company_id', 'Company', ['class' => 'label']) !!}
-        {!! Form::select('company_id', array('1' => 'Middle Tennessee Utilities', '2' => 'Grove at Shadow Green'), null, ['class' => 'select']) !!}
+        {!! Form::select('company_id', $companies, null, ['class' => 'select']) !!}
 
         {!! Form::label('name', 'Source Name', ['class' => 'label']) !!}
         {!! Form::text('name' , 'Amazon Earnings', ['class' => 'input']) !!}

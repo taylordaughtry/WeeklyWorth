@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
 use App\Expense;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,17 @@ class ExpensesController extends Controller
      */
     public function create()
     {
-        return view('expenses/create');
+        $query = Company::all('id', 'name')->toArray();
+
+        // TODO: Rework this to be more efficient. Could probably be done in a
+        // shorter way.
+        $companies = [];
+
+        foreach ($query as $row) {
+            $companies[$row['id']] = $row['name'];
+        }
+
+        return view('expenses/create')->with('companies', $companies);
     }
 
     /**
