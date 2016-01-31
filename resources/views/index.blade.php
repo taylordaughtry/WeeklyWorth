@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+<!-- TODO: Add chart information for transactions from CSV bank file <div data-ref="chart"></div> -->
 <div class="homepage-summary">
     <div class="default-row">
         <div class="number-block">
@@ -9,7 +10,7 @@
         </div>
         <div class="number-block">
             <span class="number-block__caption">This Week's Income</span>
-            <h1 class="number-block__title -credit">$1,980.67</h1>
+            <h1 class="number-block__title -credit">${{ number_format($totalIncome, 2) }}</h1>
         </div>
         <div class="number-block">
             <span class="number-block__caption">This Week's Expenses</span>
@@ -53,18 +54,12 @@
         <div class="top-expenses">
             <span class="top-expenses__title">Top Income</span>
             <ul class="top-expenses__list">
+                @foreach ($incomes as $income)
                 <li class="top-expenses__item">
-                    <span class="top-expenses__expense">Paycheck <span class="tag -is-fixed">Fixed</span></span>
-                    <span class="top-expenses__amount">$1,773.23</span>
+                    <span class="top-expenses__expense">{{ $income->name }} <span class="tag -is-{{ $income->type }}">{{ $income->type }}</span></span>
+                    <span class="top-expenses__amount">${{ number_format($income->amount, 2) }}</span>
                 </li>
-                <li class="top-expenses__item">
-                    <span class="top-expenses__expense">Amazon <span class="tag -is-variable">Variable</span></span>
-                    <span class="top-expenses__amount">$211.21</span>
-                </li>
-                <li class="top-expenses__item">
-                    <span class="top-expenses__expense">Elemental <span class="tag -is-variable">Variable</span></span>
-                    <span class="top-expenses__amount">$386.29</span>
-                </li>
+                @endforeach
             </ul>
         </div>
     </div>
