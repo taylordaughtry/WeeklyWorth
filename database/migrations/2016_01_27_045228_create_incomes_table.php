@@ -15,9 +15,11 @@ class CreateIncomesTable extends Migration
         Schema::create('incomes', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('company_id');
+            $table->char('name', 75);
             $table->date('pay_day');
             $table->text('description');
             $table->integer('amount');
+            $table->enum('type', ['variable', 'fixed']);
             $table->timestamps();
         });
     }
