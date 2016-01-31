@@ -70,7 +70,7 @@
                         </div>
                     </li>
                     <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Settings</a></li>
-                    <span class="tabs-bar__delta">Current Funds Usage: {{ number_format($fundsUsage, 2) }}%</span>
+                    <span class="tabs-bar__delta">Current Funds Usage: {{ number_format($fundsUsage, 0) }}%</span>
                 </ul>
             </div>
         </div>
