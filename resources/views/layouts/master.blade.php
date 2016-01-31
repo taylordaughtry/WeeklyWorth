@@ -63,7 +63,12 @@
                             <a href="{{ URL::to('expense/create') }}" class="tabs-bar__link tabs-bar__sublink">Add Expense</a>
                         </div>
                     </li>
-                    <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Payees</a></li>
+                    <li class="tabs-bar__item">
+                        <a href="{{ URL::to('company') }}" class="tabs-bar__link">Payees</a>
+                        <div class="tabs-bar__dropdown">
+                            <a href="{{ URL::to('company/create') }}" class="tabs-bar__link tabs-bar__sublink">Add Payee</a>
+                        </div>
+                    </li>
                     <li class="tabs-bar__item"><a href="#" class="tabs-bar__link">Settings</a></li>
                     <span class="tabs-bar__delta">Net Worth Change: 7.5%</span>
                 </ul>
