@@ -221,8 +221,8 @@ body {
 .homepage-summary {
 	.border(bottom; @lighterGray);
 	.number-block {
-		.inline-column(spaced; 1; 3; 5%);
 		.align(center);
+		.inline-column(spaced; 1; 3; 5%);
 	}
 }
 .column {
@@ -234,17 +234,34 @@ body {
 	.margin(top; 4);
 	&__title {
 		.block();
-		.uppercase();
+		.font-size(2; 1);
 		.font-weight(600);
 		.letter-spacing(0.05);
-		.font-size(2; 1);
 		.spaced(1);
+		.uppercase();
 	}
 	&__item {
-		.unstyled();
-		.relative();
 		.border(bottom; @lighterGray);
 		.padding(vertical; 1);
+		.relative();
+		.unstyled();
+	}
+	&__expense {
+		&:after {
+			.content(@exit; custom-icons);
+			.cursor();
+			.hide();
+			.lighterGray();
+			.margin(left; 1);
+			&:hover {
+				.gray();
+			}
+		}
+		&:hover {
+			&:after {
+				.inline-block();
+			}
+		}
 	}
 	&__amount {
 		.absolute(false; 0);
