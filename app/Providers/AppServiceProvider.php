@@ -16,8 +16,6 @@ class AppServiceProvider extends ServiceProvider
     {
         // This is essentially creating a global variable for templates.
         // TODO: Cache this + put it in a separate provider.
-        // TODO: Investigate performance to make sure that 'use DB' isn't borking
-        // anything. Also make sure this isn't slowing down anything.
         $income = DB::table('incomes')->sum('amount');
 
         $expenses = DB::table('expenses')->sum('amount');
