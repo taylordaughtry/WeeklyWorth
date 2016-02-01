@@ -29,6 +29,10 @@
                     <span class="top-expenses__amount">${{ number_format($expense->amount, 2) }}</span>
                 </li>
                 @endforeach
+                <li class="top-expenses__item -total">
+                    <span class="top-expenses__expense">Total Expenses:</span>
+                    <span class="top-expenses__amount">${{ number_format($totalExpenses * 4, 2) }}</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -42,6 +46,10 @@
                     <span class="top-expenses__amount">${{ number_format($income->amount, 2) }}</span>
                 </li>
                 @endforeach
+                <li class="top-expenses__item -total">
+                    <span class="top-expenses__expense">Total Expenses:</span>
+                    <span class="top-expenses__amount">${{ number_format($totalIncome * 4, 2) }}</span>
+                </li>
             </ul>
         </div>
     </div>
